@@ -1,0 +1,508 @@
+/* =============================================
+   AMALAN S — Portfolio · work.css
+   Selected Work / Portfolio Section
+   ============================================= */
+
+/* -----------------------------------------------
+   LUFGA FONT — @font-face declarations
+   All weights loaded from assets/fonts/Lufga/
+----------------------------------------------- */
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -----------------------------------------------
+   SECTION — wrapper
+   Light grey-white background matching Figma
+----------------------------------------------- */
+.work-section {
+  position: relative;
+  background-color: #F0EEF6;
+  /* Subtle paper noise texture via SVG data URI */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  padding: 80px 0 100px;
+  overflow: hidden;
+}
+
+/* -----------------------------------------------
+   INNER CONTAINER
+----------------------------------------------- */
+.work-inner {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3.5vw, 48px);
+}
+
+/* -----------------------------------------------
+   SECTION HEADER ROW
+   "• MY SELECTED WORK"  ←→  "BEHANCE →" button
+----------------------------------------------- */
+.work-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* "• MY SELECTED WORK" label */
+.work-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7C3AED;
+}
+
+.work-label-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #7C3AED;
+  flex-shrink: 0;
+}
+
+/* BEHANCE → pill button (top-right) */
+.work-behance-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Lufga', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7C3AED;
+  border: 1.5px solid #7C3AED;
+  border-radius: 100px;
+  padding: 6px 18px;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.behance-text {
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.behance-arrow {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+  color: inherit;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover animation:
+   - Slightly brighten the purple outline
+   - Move the arrow a few pixels to the right
+   - Add a very subtle background tint
+   - Smooth 200–300ms transition
+   - On mouse leave, smoothly returns
+*/
+.work-behance-link:hover {
+  border-color: #8B5CF6;
+  color: #8B5CF6;
+  background-color: rgba(124, 58, 237, 0.06);
+  transform: translateY(-1px);
+}
+
+.work-behance-link:hover .behance-arrow {
+  transform: translateX(3px);
+}
+
+/* Keyboard focus state */
+.work-behance-link:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 3px;
+  border-radius: 100px;
+}
+
+/* -----------------------------------------------
+   MAIN HEADING
+   "I Make Ideas Visible."
+----------------------------------------------- */
+.work-heading {
+  text-align: center;
+  font-family: 'Lufga', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(38px, 5.5vw, 68px);
+  letter-spacing: 7px;
+  line-height: 1.1;
+  color: #0C071D;
+  margin: 0 auto 36px;
+}
+
+.work-heading-accent {
+  color: #7C3AED;
+}
+
+/* -----------------------------------------------
+   FILTER PILLS ROW
+   Centered row of modern rounded pills
+----------------------------------------------- */
+.work-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.work-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lufga', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #1A1528;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E1EE;
+  border-radius: 100px;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast, 0.18s ease),
+    color var(--transition-fast, 0.18s ease),
+    border-color var(--transition-fast, 0.18s ease),
+    box-shadow var(--transition-fast, 0.18s ease);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.work-filter-btn:hover {
+  border-color: #7C3AED;
+  color: #7C3AED;
+}
+
+.work-filter-btn.is-active {
+  background: #7C3AED;
+  border-color: #7C3AED;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+}
+
+.work-filter-btn:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 3px;
+}
+
+/* -----------------------------------------------
+   PROJECT GRID
+   3-column grid on desktop, equal spacing
+----------------------------------------------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 439px));
+  justify-content: center;
+  gap: 24px;
+}
+
+/* -----------------------------------------------
+   PROJECT CARD CONTAINER
+   Desktop reference: 439px × 477px, 16.31px radius
+   24px inset on top, bottom, left, and right
+----------------------------------------------- */
+.project-card {
+  background: #FFFFFF;
+  border-radius: 16.31px;
+  width: 100%;
+  max-width: 439px;
+  aspect-ratio: 439 / 477;
+  padding: clamp(16px, 5.5%, 24px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* -----------------------------------------------
+   CARD MEDIA & ARROW BUTTON OVERLAY
+   Artwork with bottom-right notch for arrow button
+----------------------------------------------- */
+.card-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .card-img {
+  transform: scale(1.02);
+}
+
+/* Dark gradient rounded-square arrow button (B-icon.svg) positioned in notch */
+.card-arrow-btn {
+  position: absolute;
+  right: clamp(10px, 3.2%, 14px);
+  bottom: clamp(10px, 3.2%, 14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(52px, 16%, 70px);
+  height: auto;
+  aspect-ratio: 70 / 68;
+  text-decoration: none;
+  z-index: 2;
+  border-radius: 19.46px;
+  box-shadow: none;
+  filter: none;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease;
+}
+
+.card-arrow-btn:hover {
+  transform: scale(1.06) translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.card-arrow-btn:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 3px;
+}
+
+.card-arrow-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* -----------------------------------------------
+   VIEW ALL PROJECT CARD (9th card)
+   Light dashed card matching exact aspect ratio & dimensions
+----------------------------------------------- */
+.view-all-card {
+  background: #ECEAF2;
+  border: 1.5px dashed #C3BDD2;
+  border-radius: 16.31px;
+  padding: clamp(16px, 5.5%, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  max-width: 439px;
+  aspect-ratio: 439 / 477;
+  box-sizing: border-box;
+  transition:
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    box-shadow 0.28s ease;
+}
+
+.view-all-card:hover {
+  transform: translateY(-4px);
+  border-color: #7C3AED;
+  box-shadow: 0 16px 36px rgba(124, 58, 237, 0.08);
+}
+
+.view-all-card:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 4px;
+  border-radius: 16.31px;
+}
+
+.view-all-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.view-all-icon {
+  width: clamp(52px, 16%, 70px);
+  height: auto;
+  aspect-ratio: 70 / 68;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-all-card:hover .view-all-icon {
+  transform: scale(1.06) translateY(-2px);
+}
+
+.view-all-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.view-all-label {
+  font-family: 'Lufga', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8F8A9E;
+  text-align: center;
+}
+
+/* -----------------------------------------------
+   HIDDEN STATE — for filtered-out cards
+----------------------------------------------- */
+.project-card[data-hidden='true'],
+.view-all-card[data-hidden='true'] {
+  display: none;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Tablet  ≤ 960px
+----------------------------------------------- */
+@media (max-width: 960px) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 439px));
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .work-heading {
+    font-size: clamp(32px, 6vw, 48px);
+    margin-bottom: 28px;
+  }
+
+  .work-filters {
+    margin-bottom: 36px;
+    gap: 10px;
+  }
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Mobile  ≤ 640px
+----------------------------------------------- */
+@media (max-width: 640px) {
+  .work-section {
+    padding: 56px 0 72px;
+  }
+
+  .work-inner {
+    padding: 0 16px;
+  }
+
+  .work-header {
+    margin-bottom: 18px;
+  }
+
+  .work-heading {
+    font-size: clamp(28px, 8.5vw, 40px);
+    margin-bottom: 22px;
+  }
+
+  .work-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 8px;
+    padding-bottom: 6px;
+    margin-bottom: 28px;
+  }
+
+  .work-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .work-filter-btn {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 7px 18px;
+  }
+
+  .work-grid {
+    grid-template-columns: minmax(0, 439px);
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Very small  ≤ 380px
+----------------------------------------------- */
+@media (max-width: 380px) {
+  .work-heading {
+    font-size: 26px;
+  }
+}

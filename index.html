@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Amalan S — UI/UX & Product Designer based in Chennai, India. Crafting digital products that are easier to understand, easier to use, and harder to forget." />
+  <title>Amalan S - UI/UX & Product Designer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/title%20icon%20favicon/amal%20favicon.png" />
+  <link rel="apple-touch-icon" href="assets/title%20icon%20favicon/amal%20favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/work.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/marquee.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       BACKGROUND — SVG wave / grid effect
+  ============================================== -->
+  <div class="bg-canvas" aria-hidden="true">
+    <img class="bg-waves" src="assets/bg%20assets/hero%20section%20bg%20asset.svg" alt="" />
+  </div>
+
+  <!-- =============================================
+       PAGE WRAPPER
+  ============================================== -->
+  <div class="page-wrapper">
+
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+
+        <!-- Brand / Logo -->
+        <div class="brand">
+          <span class="brand-name">Amalan S</span>
+          <span class="brand-title">UIUX / Product Designer</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <ul class="nav-list" role="list">
+            <li><a href="#hero" class="nav-link nav-link--active" aria-current="location">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Resume Button — always visible on all screen sizes -->
+          <a href="assets/resume/Amalan%20resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume"
+            aria-label="View Amalan's resume PDF (opens in new tab)">
+            Resume
+          </a>
+
+          <!-- Hamburger — visible on mobile only -->
+          <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="mobile-nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="#hero" class="mobile-nav-link mobile-nav-link--active" aria-current="location">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#work" class="mobile-nav-link">Work</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+    <main id="main-content">
+      <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+        <div class="hero-inner">
+
+          <!-- Profile Image -->
+          <div class="profile-wrap">
+            <img src="assets/images/amal%20profile.webp"
+              alt="Amalan S, UI/UX and Product Designer, photographed against a purple abstract background"
+              class="profile-img" width="220" height="260" loading="eager" fetchpriority="high" />
+          </div>
+
+          <!-- Heading -->
+          <h1 class="hero-heading" id="hero-heading">Hey, I'm Amalan.</h1>
+
+          <!-- Description — monospace typewriter style -->
+          <p class="hero-desc"
+            aria-label="I make digital products easier to understand, easier to use, and harder to forget.">
+            <span class="desc-bright">I make digital </span><span class="desc-muted">products easier to </span><span
+              class="desc-highlight">understand</span><span class="desc-muted">, easier to use,</span>
+            <br class="desc-break" />
+            <span class="desc-muted">and </span><span class="desc-highlight">harder to forget</span><span
+              class="desc-bright">.</span>
+          </p>
+
+          <!-- ==========================================
+               SOCIAL LINKS
+               To update URLs later, find this section and
+               change the href values in the three <a> tags.
+          =========================================== -->
+          <div class="social-links" role="list" aria-label="Social media profiles">
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/crt_amal" target="_blank" rel="noopener noreferrer" class="social-btn"
+              role="listitem" aria-label="Visit Amalan on Instagram (opens in new tab)">
+              <img src="assets/icons/instagram.svg" class="social-icon" width="22" height="22" alt="" aria-hidden="true"
+                focusable="false" />
+              <span>Instagram</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/s-amalan-b-tech-uiux/" target="_blank" rel="noopener noreferrer"
+              class="social-btn" role="listitem" aria-label="Visit Amalan on LinkedIn (opens in new tab)">
+              <img src="assets/icons/linkedin.svg" class="social-icon" width="22" height="22" alt="" aria-hidden="true"
+                focusable="false" />
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- Behance -->
+            <a href="https://www.behance.net/samalanbetech" target="_blank" rel="noopener noreferrer" class="social-btn"
+              role="listitem" aria-label="Visit Amalan on Behance (opens in new tab)">
+              <img src="assets/icons/behance.svg" class="social-icon" width="22" height="22" alt="" aria-hidden="true"
+                focusable="false" />
+              <span>Behance</span>
+            </a>
+
+          </div>
+
+          <!-- Status Bar -->
+          <div class="status-bar" aria-label="Location and work availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p class="status-text">
+              <span class="status-separator" aria-hidden="true"> · </span>
+              <span class="status-muted">Open to Full-time, Freelance &amp; Remote Opportunities</span>
+            </p>
+          </div>
+
+        </div><!-- /.hero-inner -->
+      </section>
+    </main>
+
+    <!-- =========================================
+         SELECTED WORK / PORTFOLIO SECTION
+    ========================================== -->
+    <section class="work-section" id="work" aria-labelledby="work-heading">
+      <div class="work-inner">
+
+        <!-- Section header row -->
+        <div class="work-header">
+          <!-- "• MY SELECTED WORK" label -->
+          <p class="work-label" aria-label="My Selected Work">
+            <span class="work-label-dot" aria-hidden="true"></span>
+            MY SELECTED WORK
+          </p>
+
+          <!-- Behance profile link (top-right) -->
+          <a id="work-behance-profile-link" href="https://www.behance.net/samalanbetech" target="_blank"
+            rel="noopener noreferrer" class="work-behance-link"
+            aria-label="View full portfolio on Behance (opens in new tab)">
+            <span class="behance-text">BEHANCE</span>
+            <span class="behance-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div><!-- /.work-header -->
+
+        <!-- Main heading -->
+        <h2 class="work-heading" id="work-heading">
+          I Make Ideas <span class="work-heading-accent">Visible.</span>
+        </h2>
+
+        <!-- Category filter pills -->
+        <div class="work-filters" role="group" aria-label="Filter projects by category">
+
+          <button class="work-filter-btn is-active" data-filter="all" aria-pressed="true" id="filter-all">
+            All
+          </button>
+          <button class="work-filter-btn" data-filter="uiux" aria-pressed="false" id="filter-uiux">
+            UIUX
+          </button>
+          <button class="work-filter-btn" data-filter="logos" aria-pressed="false" id="filter-logos">
+            Logos
+          </button>
+          <button class="work-filter-btn" data-filter="creative-posters" aria-pressed="false"
+            id="filter-creative-posters">
+            Creative Posters
+          </button>
+          <button class="work-filter-btn" data-filter="packaging" aria-pressed="false" id="filter-packaging">
+            Packaging
+          </button>
+          <button class="work-filter-btn" data-filter="video-editing" aria-pressed="false" id="filter-video-editing">
+            Video Editing
+          </button>
+
+        </div><!-- /.work-filters -->
+
+        <!-- Project card grid — populated by projects.js -->
+        <div class="work-grid" id="work-grid" role="list" aria-label="Portfolio projects">
+          <!-- Cards are injected here by JavaScript -->
+        </div><!-- /.work-grid -->
+
+      </div><!-- /.work-inner -->
+    </section><!-- /#work -->
+
+    <!-- =========================================
+         EXPERIENCE / CAREER TIMELINE SECTION
+    ========================================== -->
+    <section class="experience-section" id="experience" aria-labelledby="experience-heading">
+      <div class="experience-inner">
+
+        <!-- Main Heading -->
+        <h2 class="experience-heading" id="experience-heading">
+          My Work <span class="experience-heading-accent">Experience</span>
+        </h2>
+
+        <!-- Timeline Container with Left Markers + Cards -->
+        <div class="experience-timeline" role="list" aria-label="Career work experience timeline">
+
+          <!-- Experience 1: ANT Technologies -->
+          <div class="experience-item" role="listitem">
+            <!-- Timeline Marker on Left -->
+            <div class="timeline-marker-wrap" aria-hidden="true">
+              <div class="timeline-marker marker-past">
+                <span class="marker-dot"></span>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <article class="experience-card" id="exp-ant-technologies">
+              <!-- Left Area: Company Logo + Name + Dates -->
+              <div class="card-company-area">
+                <div class="card-logo-box">
+                  <img class="card-logo-img" src="assets/logos/ANT.png" alt="ANT Technologies Logo" width="58"
+                    height="58" loading="lazy" />
+                </div>
+                <div class="card-company-info">
+                  <h3 class="card-company-name">ANT Technologies</h3>
+                  <p class="card-meta">
+                    <svg class="card-meta-icon" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path
+                        d="M6 0.5C3.51472 0.5 1.5 2.51472 1.5 5C1.5 8.375 6 13.5 6 13.5C6 13.5 10.5 8.375 10.5 5C10.5 2.51472 8.48528 0.5 6 0.5ZM6 6.75C5.0335 6.75 4.25 5.9665 4.25 5C4.25 4.0335 5.0335 3.25 6 3.25C6.9665 3.25 7.75 4.0335 7.75 5C7.75 5.9665 6.9665 6.75 6 6.75Z"
+                        stroke="#ABB3C1" stroke-width="1.2" />
+                    </svg>
+                    <span>Kumbakonam, Jun 2024 &ndash; Dec 2024</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Center Divider -->
+              <div class="card-divider" aria-hidden="true"></div>
+
+              <!-- Right Area: Role + Description -->
+              <div class="card-role-area">
+                <h4 class="card-role-title">Graphic Designer</h4>
+                <p class="card-role-desc">Created engaging visual designs for marketing, branding, presentations, and
+                  social media across digital and print platforms.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Experience 2: Onwords Automation -->
+          <div class="experience-item" role="listitem">
+            <!-- Timeline Marker on Left -->
+            <div class="timeline-marker-wrap" aria-hidden="true">
+              <div class="timeline-marker marker-mid">
+                <span class="marker-dot"></span>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <article class="experience-card" id="exp-onwords-automation">
+              <!-- Left Area: Company Logo + Name + Dates -->
+              <div class="card-company-area">
+                <div class="card-logo-box">
+                  <img class="card-logo-img" src="assets/logos/onwords.png" alt="Onwords Automation Logo" width="58"
+                    height="58" loading="lazy" />
+                </div>
+                <div class="card-company-info">
+                  <h3 class="card-company-name">Onwords Automation</h3>
+                  <p class="card-meta">
+                    <svg class="card-meta-icon" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path
+                        d="M6 0.5C3.51472 0.5 1.5 2.51472 1.5 5C1.5 8.375 6 13.5 6 13.5C6 13.5 10.5 8.375 10.5 5C10.5 2.51472 8.48528 0.5 6 0.5ZM6 6.75C5.0335 6.75 4.25 5.9665 4.25 5C4.25 4.0335 5.0335 3.25 6 3.25C6.9665 3.25 7.75 4.0335 7.75 5C7.75 5.9665 6.9665 6.75 6 6.75Z"
+                        stroke="#ABB3C1" stroke-width="1.2" />
+                    </svg>
+                    <span>Coimbatore, Feb 2025 &ndash; Mar 2026</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Center Divider -->
+              <div class="card-divider" aria-hidden="true"></div>
+
+              <!-- Right Area: Role + Description -->
+              <div class="card-role-area">
+                <h4 class="card-role-title">UI/UX Designer</h4>
+                <p class="card-role-desc">Designed web and mobile UI for automation, smart-home, and business solutions.
+                  Created wireframes, prototypes, product graphics, packaging, and marketing creatives.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Experience 3: Xenovex Technologies (Current Role) -->
+          <div class="experience-item" role="listitem">
+            <!-- Timeline Marker on Left -->
+            <div class="timeline-marker-wrap" aria-hidden="true">
+              <div class="timeline-marker marker-current">
+                <span class="marker-dot"></span>
+              </div>
+            </div>
+
+            <!-- Card (is-current with subtle purple border & background tint) -->
+            <article class="experience-card is-current" id="exp-xenovex-technologies">
+              <!-- Left Area: Company Logo + Name + Dates -->
+              <div class="card-company-area">
+                <div class="card-logo-box">
+                  <img class="card-logo-img" src="assets/logos/xenovvex.png" alt="Xenovex Technologies Logo" width="58"
+                    height="58" loading="lazy" />
+                </div>
+                <div class="card-company-info">
+                  <h3 class="card-company-name">Xenovex Technologies</h3>
+                  <p class="card-meta">
+                    <svg class="card-meta-icon" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path
+                        d="M6 0.5C3.51472 0.5 1.5 2.51472 1.5 5C1.5 8.375 6 13.5 6 13.5C6 13.5 10.5 8.375 10.5 5C10.5 2.51472 8.48528 0.5 6 0.5ZM6 6.75C5.0335 6.75 4.25 5.9665 4.25 5C4.25 4.0335 5.0335 3.25 6 3.25C6.9665 3.25 7.75 4.0335 7.75 5C7.75 5.9665 6.9665 6.75 6 6.75Z"
+                        stroke="#ABB3C1" stroke-width="1.2" />
+                    </svg>
+                    <span>Chennai, Apr 2026 &ndash; Present</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Center Divider -->
+              <div class="card-divider" aria-hidden="true"></div>
+
+              <!-- Right Area: Role + Description -->
+              <div class="card-role-area">
+                <h4 class="card-role-title">Associate Engineer &mdash; UI/UX</h4>
+                <p class="card-role-desc">Design web and mobile interfaces for government and enterprise products,
+                  creating user flows, wireframes, prototypes, and reusable UI components.</p>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /.experience-timeline -->
+
+      </div><!-- /.experience-inner -->
+    </section><!-- /#experience -->
+
+    <!-- =========================================
+         ABOUT ME SECTION
+    ========================================== -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <!-- Left: Profile Photo -->
+        <div class="about-photo-col">
+          <img class="about-photo" src="assets/images/amal 2 image.png" alt="Amalan S — UI/UX &amp; Product Designer"
+            width="480" height="560" loading="lazy" />
+        </div>
+
+        <!-- Right: Heading + Paragraphs -->
+        <div class="about-text-col">
+          <h2 class="about-heading" id="about-heading">
+            About <span class="about-heading-accent">Me</span>
+          </h2>
+
+          <p class="about-para">
+            I love turning ideas into designs that look good, feel simple, and solve real problems. With 2.5+ years of
+            experience, I create user-friendly digital experiences, memorable brand identities, and creative visuals
+            that connect with people.
+          </p>
+
+          <p class="about-para">
+            Beyond design, I enjoy video editing and visual storytelling, bringing ideas to life through motion and
+            creativity. I also explore AI tools to discover new possibilities, experiment with concepts, and make my
+            creative workflow smarter and more efficient.
+          </p>
+
+          <p class="about-para">
+            Using tools like Figma, Adobe Photoshop, Illustrator, After Effects, Premiere Pro, and AI-powered design
+            tools, I combine creativity, technology, and thoughtful design to transform ideas into meaningful
+            experiences.
+          </p>
+        </div>
+      </div>
+    </section><!-- /#about -->
+
+    <!-- =============================================
+         TOOLS & SKILLS MARQUEE SECTION
+    ============================================== -->
+    <section class="tools-marquee-section" aria-label="Tools and Skills">
+      <div class="tools-marquee-viewport">
+        <div class="tools-marquee-strip">
+          <div class="tools-marquee-track">
+            <div class="tools-marquee-group">
+              <span class="marquee-item">Figma</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe Photoshop</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe Illustrator</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe After Effects</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe Premiere Pro</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Antigravity</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">AI-Powered Design Tools</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Blender</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Wireframe</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+            </div>
+            <div class="tools-marquee-group" aria-hidden="true">
+              <span class="marquee-item">Figma</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe Photoshop</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe Illustrator</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe After Effects</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Adobe Premiere Pro</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Antigravity</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">AI-Powered Design Tools</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Blender</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+              <span class="marquee-item">Wireframe</span>
+              <svg class="marquee-star" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#8B4DFF" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- =============================================
+       SITE FOOTER
+  ============================================== -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+
+    <!-- Background image layer -->
+    <div class="footer-bg" aria-hidden="true"></div>
+
+    <!-- Content container -->
+    <div class="footer-inner">
+
+      <!-- ── Top: Heading + Description ── -->
+      <div class="footer-hero">
+        <h2 class="footer-heading">Got an Idea in Mind<span class="footer-heading-mark">?<img
+              src="assets/icons/futor/hifen.svg" class="footer-heading-icon" alt="" aria-hidden="true" /></span></h2>
+        <p class="footer-subheading">Let's Bring It to Life.</p>
+        <p class="footer-desc">
+          Whether you have a project in mind, need a creative perspective, or simply want to exchange ideas,
+          I'm always open to new opportunities to create something meaningful together.
+        </p>
+      </div>
+
+      <!-- ── Contact Cards ── -->
+      <div class="footer-cards">
+
+        <!-- Email Card -->
+        <div class="footer-card" id="footer-email-card">
+          <div class="footer-card-header">
+            <span class="footer-card-label">Email Address</span>
+            <div class="footer-copy-wrapper">
+              <button type="button" class="footer-copy-btn" id="copy-email-btn" aria-label="Copy email address"
+                data-copy="amalsamu@gmail.com" data-confirm="Copied!">
+                <img src="assets/icons/futor/copy.svg" alt="" aria-hidden="true" width="20" height="20" />
+              </button>
+              <span class="footer-copy-tooltip" id="copy-email-toast" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+          <a href="mailto:amalsamu@gmail.com" class="footer-contact-btn" id="email-contact-btn"
+            aria-label="Send email to amalsamu@gmail.com">
+            <span class="footer-contact-text">amalsamu@gmail.com</span>
+            <img src="assets/icons/futor/arrow.svg" class="footer-contact-arrow" alt="" aria-hidden="true" width="24"
+              height="24" />
+          </a>
+        </div>
+
+        <!-- Phone & WhatsApp Card -->
+        <div class="footer-card" id="footer-phone-card">
+          <div class="footer-card-header">
+            <span class="footer-card-label">Phone &amp; <a href="https://wa.me/919361932340" target="_blank"
+                rel="noopener noreferrer" class="footer-wa-link" title="Chat on WhatsApp"
+                aria-label="Chat on WhatsApp (opens in new tab)">WhatsApp</a></span>
+            <div class="footer-copy-wrapper">
+              <button type="button" class="footer-copy-btn" id="copy-phone-btn" aria-label="Copy phone number"
+                data-copy="+91 9361932340" data-confirm="Copied!">
+                <img src="assets/icons/futor/copy.svg" alt="" aria-hidden="true" width="20" height="20" />
+              </button>
+              <span class="footer-copy-tooltip" id="copy-phone-toast" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+          <a href="tel:+919361932340" class="footer-contact-btn" id="phone-contact-btn"
+            aria-label="Call +91 9361932340">
+            <span class="footer-contact-text">+91 9361932340</span>
+            <img src="assets/icons/futor/arrow.svg" class="footer-contact-arrow" alt="" aria-hidden="true" width="24"
+              height="24" />
+          </a>
+        </div>
+
+      </div><!-- /.footer-cards -->
+
+      <!-- ── Divider ── -->
+      <hr class="footer-divider" />
+
+      <!-- ── Bottom Row ── -->
+      <div class="footer-bottom">
+
+        <!-- Left: Copyright + Links -->
+        <div class="footer-bottom-left">
+          <span class="footer-copyright">Made by Amal &nbsp;·&nbsp; &copy; 2026</span>
+          <nav class="footer-legal" aria-label="Footer legal links">
+            <a href="#" class="footer-legal-link">Terms &amp; Conditions</a>
+            <span class="footer-legal-dot" aria-hidden="true">&middot;</span>
+            <a href="#" class="footer-legal-link">Privacy Policy</a>
+          </nav>
+        </div>
+
+        <!-- Right: Social + Resume icons -->
+        <nav class="footer-social" aria-label="Social media links">
+          <a href="https://www.linkedin.com/in/s-amalan-b-tech-uiux/" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="LinkedIn profile (opens in new tab)">
+            <img src="assets/icons/futor/linkden.svg" alt="LinkedIn" width="24" height="24" />
+          </a>
+          <a href="https://www.behance.net/samalanbetech" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="Behance profile (opens in new tab)">
+            <img src="assets/icons/futor/behance.svg" alt="Behance" width="24" height="24" />
+          </a>
+          <a href="https://www.instagram.com/crt_amal" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="Instagram profile (opens in new tab)">
+            <img src="assets/icons/futor/instagram.svg" alt="Instagram" width="24" height="24" />
+          </a>
+          <a href="assets/resume/Amalan%20resume.pdf" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="View resume PDF (opens in new tab)">
+            <img src="assets/icons/futor/resume.svg" alt="Resume" width="19" height="24" />
+          </a>
+        </nav>
+
+      </div><!-- /.footer-bottom -->
+
+    </div><!-- /.footer-inner -->
+  </footer><!-- /#contact -->
+
+  <script src="js/projects.js"></script>
+  <script src="js/work.js"></script>
+  <script src="js/experience.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

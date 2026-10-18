@@ -1,0 +1,234 @@
+/* =============================================
+   AMALAN S — Portfolio · responsive.css
+   Responsive breakpoints: Tablet and Mobile
+   ============================================= */
+
+/* -----------------------------------------------
+   TABLET — max-width: 900px
+   Reduce spacing, keep desktop nav if room
+----------------------------------------------- */
+@media (max-width: 900px) {
+
+  /* Nav pill gets compact */
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  /* Brand text scales */
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-title {
+    font-size: 11px;
+  }
+
+  /* Hero spacing */
+  .hero-inner {
+    padding: 32px clamp(16px, 4vw, 40px) 50px;
+    gap: 0;
+  }
+
+  .profile-wrap {
+    margin-bottom: 28px;
+  }
+
+  .hero-heading {
+    margin-bottom: 18px;
+  }
+
+  .hero-desc {
+    margin-bottom: 30px;
+  }
+
+  .social-links {
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  .social-btn {
+    padding: 10px 18px;
+    font-size: 13.5px;
+  }
+
+}
+
+/* -----------------------------------------------
+   MOBILE — max-width: 640px
+   Hamburger nav, stacked social, larger image
+----------------------------------------------- */
+@media (max-width: 640px) {
+
+  /* Hide desktop nav */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Header inner layout for mobile */
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  /* Resume button — slightly smaller on mobile */
+  .btn-resume {
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 9px;
+  }
+
+  /* Hero section */
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero-inner {
+    padding: 28px 20px 48px;
+    align-items: center;
+  }
+
+  /* Profile image — wider on mobile */
+  .profile-img {
+    width: clamp(200px, 65vw, 280px);
+    height: clamp(235px, 78vw, 330px);
+    border-radius: 20px;
+  }
+
+  .profile-wrap {
+    margin-bottom: 24px;
+  }
+
+  /* Heading */
+  .hero-heading {
+    font-size: clamp(34px, 10vw, 52px);
+    margin-bottom: 16px;
+    letter-spacing: -0.025em;
+  }
+
+  /* Description */
+  .hero-desc {
+    font-size: clamp(12px, 3.6vw, 15px);
+    margin-bottom: 28px;
+    max-width: 100%;
+    line-height: 1.8;
+  }
+
+  /* Description line break — let it wrap naturally */
+  .desc-break {
+    display: none;
+  }
+
+  /* Social links — stack vertically, full-width */
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Status bar wraps naturally */
+  .status-bar {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 7px;
+    text-align: left;
+    max-width: 360px;
+  }
+
+  .status-dot {
+    margin-top: 5px;
+  }
+
+  .status-text {
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+
+  /* Mobile nav overlay — shown as flex when .is-open */
+  .mobile-nav.is-open {
+    display: flex;
+  }
+
+}
+
+/* -----------------------------------------------
+   VERY SMALL SCREENS — max-width: 380px
+   Prevent any overflow on tiny phones
+----------------------------------------------- */
+@media (max-width: 380px) {
+
+  .hero-heading {
+    font-size: 30px;
+  }
+
+  .profile-img {
+    width: 85vw;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .hero-inner {
+    padding: 20px 16px 40px;
+  }
+
+  .btn-resume {
+    font-size: 12px;
+    padding: 7px 13px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+}
+
+/* -----------------------------------------------
+   LARGE SCREENS — min-width: 1280px
+   Give more breathing room on wide displays
+----------------------------------------------- */
+@media (min-width: 1280px) {
+
+  .hero-inner {
+    padding: 48px 60px 72px;
+  }
+
+  .profile-wrap {
+    margin-bottom: 36px;
+  }
+
+  .hero-heading {
+    margin-bottom: 24px;
+  }
+
+  .hero-desc {
+    margin-bottom: 40px;
+  }
+
+  .social-links {
+    margin-bottom: 36px;
+  }
+
+}

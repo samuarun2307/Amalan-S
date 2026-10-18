@@ -1,0 +1,141 @@
+/* =============================================
+   AMALAN S — Portfolio · about.css
+   About Me Section
+   ============================================= */
+
+/* -----------------------------------------------
+   ABOUT ME SECTION WRAPPER
+   Clean white background, generous vertical padding
+----------------------------------------------- */
+.about-section {
+  position: relative;
+  background-color: #EFEEF6;
+  padding: 100px 0 110px;
+  overflow: hidden;
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+/* -----------------------------------------------
+   LEFT COLUMN — Profile Photo
+----------------------------------------------- */
+.about-photo-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+.about-photo {
+  display: block;
+  width: clamp(280px, 36vw, 420px);
+  height: auto;
+  aspect-ratio: 6 / 7;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 20px;
+}
+
+/* -----------------------------------------------
+   RIGHT COLUMN — Heading + Paragraphs
+----------------------------------------------- */
+.about-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+/* "About Me" heading — bold, "About" dark, "Me" purple */
+.about-heading {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+  font-size: clamp(40px, 5.5vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #101225;
+  margin: 0 0 28px;
+}
+
+.about-heading-accent {
+  color: #8B4DFF;
+}
+
+/* Paragraph text — muted gray-blue, readable body copy */
+.about-para {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.75;
+  color: #6B7280;
+  margin: 0 0 20px;
+  max-width: 540px;
+}
+
+.about-para:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Tablet  (up to 860px)
+----------------------------------------------- */
+@media (max-width: 860px) {
+  .about-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+
+  .about-photo {
+    width: 100%;
+  }
+
+  .about-heading {
+    font-size: clamp(32px, 5vw, 44px);
+  }
+
+  .about-para {
+    font-size: 15px;
+  }
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Mobile  (up to 600px)
+----------------------------------------------- */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 72px 0 80px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-photo-col {
+    justify-content: center;
+  }
+
+  .about-photo {
+    width: min(340px, 90vw);
+    aspect-ratio: 4 / 5;
+  }
+
+  .about-heading {
+    font-size: clamp(36px, 10vw, 48px);
+    text-align: left;
+  }
+
+  .about-para {
+    font-size: 15px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,434 @@
+/* =============================================
+   AMALAN S — Portfolio · experience.css
+   Experience / Career Timeline Section
+   ============================================= */
+
+/* -----------------------------------------------
+   SF PRO FONT — @font-face declarations
+   Loaded from assets/fonts/SF-Pro/
+----------------------------------------------- */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Black';
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Display-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -----------------------------------------------
+   EXPERIENCE SECTION WRAPPER
+   Clean white background matching Figma reference
+----------------------------------------------- */
+.experience-section {
+  position: relative;
+  background-color: #EFEEF6;
+  padding: 100px 0 130px;
+  overflow: hidden;
+}
+
+.experience-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+
+/* -----------------------------------------------
+   SECTION MAIN HEADING
+   "My Work Experience"
+   SF Pro Black · 7px letter spacing
+----------------------------------------------- */
+.experience-heading {
+  text-align: center;
+  font-family: 'SF Pro Black', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  font-size: clamp(34px, 4.8vw, 56px);
+  letter-spacing: 7px;
+  line-height: 1.15;
+  color: #101225;
+  margin: 0 auto 72px;
+  white-space: nowrap;
+}
+
+.experience-heading-accent {
+  color: #8B4DFF;
+}
+
+/* -----------------------------------------------
+   TIMELINE CONTAINER & DOTTED LINE ON LEFT
+----------------------------------------------- */
+.experience-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Continuous vertical dotted line along marker centers */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 18px;
+  transform: translateX(-50%);
+  width: 0;
+  border-left: 2px dotted #C8C5D0;
+  z-index: 1;
+}
+
+/* -----------------------------------------------
+   TIMELINE ROW (Marker on Left + Card on Right)
+----------------------------------------------- */
+.experience-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Timeline marker column on left */
+.timeline-marker-wrap {
+  position: relative;
+  z-index: 2;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-marker {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.marker-dot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Marker 1 — Light Gray */
+.marker-past {
+  border: 1.5px dashed #D5D3DE;
+}
+
+.marker-past .marker-dot {
+  background-color: #BDBDBD;
+}
+
+/* Marker 2 — Muted Purple-Gray */
+.marker-mid {
+  border: 1.5px dashed #C3BED0;
+}
+
+.marker-mid .marker-dot {
+  background-color: #766D88;
+}
+
+/* Marker 3 — Vivid Purple (Current) */
+.marker-current {
+  border: 1.5px dashed #CDAFF;
+}
+
+.marker-current .marker-dot {
+  background-color: #6D32DC;
+}
+
+/* -----------------------------------------------
+   EXPERIENCE CARD
+   3 areas: Left (Company) | Center (Divider) | Right (Role)
+----------------------------------------------- */
+.experience-card {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1px 1fr;
+  align-items: center;
+  gap: 36px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 28px 36px;
+  border: 1px solid #F0EEF6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+/* Current Role (Xenovex) — subtle purple border & very light purple tint */
+.experience-card.is-current {
+  background-color: #F9F7FE;
+  border: 1.5px solid #DDD1FB;
+}
+
+/* Left Area: Company Logo + Name + Dates */
+.card-company-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* Rounded square logo container */
+.card-logo-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
+}
+
+.card-company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.card-company-name {
+  font-family: 'Lufga', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #101225;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: #ABB3C1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.card-meta-icon {
+  width: 12px;
+  height: 14px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Center Divider Line */
+.card-divider {
+  width: 1px;
+  height: 56px;
+  background-color: #EAE6F4;
+  align-self: center;
+}
+
+.experience-card.is-current .card-divider {
+  background-color: #E2D5FC;
+}
+
+/* Right Area: Job Title + Description */
+.card-role-area {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.card-role-title {
+  font-family: 'Lufga', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #101225;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.card-role-desc {
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #7A8293;
+  margin: 0;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Tablet  ≤ 960px
+----------------------------------------------- */
+@media (max-width: 960px) {
+  .experience-section {
+    padding: 80px 0 100px;
+  }
+
+  .experience-heading {
+    margin-bottom: 56px;
+    font-size: clamp(28px, 4.5vw, 42px);
+    white-space: normal;
+  }
+
+  .experience-card {
+    grid-template-columns: minmax(230px, 280px) 1px 1fr;
+    gap: 24px;
+    padding: 24px 28px;
+  }
+
+  .card-meta {
+    white-space: normal;
+  }
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Mobile  ≤ 768px
+----------------------------------------------- */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 0 80px;
+  }
+
+  .experience-inner {
+    padding: 0 16px;
+  }
+
+  .experience-heading {
+    font-size: clamp(26px, 7vw, 36px);
+    margin-bottom: 44px;
+    white-space: normal;
+    letter-spacing: 4px;
+  }
+
+  .experience-item {
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  /* Align marker with upper portion of card on mobile */
+  .timeline-marker-wrap {
+    padding-top: 24px;
+  }
+
+  .experience-timeline::before {
+    left: 18px;
+    top: 36px;
+    bottom: 36px;
+  }
+
+  .experience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .card-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+
+  .card-logo-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .card-company-name,
+  .card-role-title {
+    font-size: 18px;
+  }
+
+  .card-meta,
+  .card-role-desc {
+    font-size: 13px;
+  }
+}
+
+/* -----------------------------------------------
+   RESPONSIVE — Very small mobile  ≤ 400px
+----------------------------------------------- */
+@media (max-width: 400px) {
+  .experience-heading {
+    letter-spacing: 3px;
+    font-size: 24px;
+  }
+
+  .experience-item {
+    gap: 10px;
+  }
+
+  .timeline-marker-wrap {
+    width: 30px;
+  }
+
+  .timeline-marker {
+    width: 30px;
+    height: 30px;
+  }
+
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .experience-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}

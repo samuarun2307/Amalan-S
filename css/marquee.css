@@ -1,0 +1,148 @@
+/* =============================================
+   AMALAN S — Portfolio · marquee.css
+   Animated Tools & Skills Strip Section
+   ============================================= */
+
+/* Ensure Lufga font-face is available */
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('../assets/fonts/Lufga/Lufga-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Outer Section: Positioned immediately above footer in document flow */
+.tools-marquee-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* Pause animation on hover */
+.tools-marquee-section:hover .tools-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Viewport clipping boundary */
+.tools-marquee-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Continuous horizontal strip */
+.tools-marquee-strip {
+  width: 100%;
+  background-color: #EFEEF6;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  transform: rotate(0deg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Infinite flex track: travels purely horizontally from right to left */
+.tools-marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  align-items: center;
+  will-change: transform;
+  animation: tools-marquee-scroll 28s linear infinite;
+}
+
+/* Single tool group */
+.tools-marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Tool text label */
+.marquee-item {
+  font-family: 'Lufga', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: -0.2px;
+  line-height: 1;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Purple four-point star separator */
+.marquee-star {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0 24px;
+  vertical-align: middle;
+}
+
+/* Pure, seamless linear horizontal scroll (right-to-left) */
+@keyframes tools-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .tools-marquee-track {
+    animation: none !important;
+  }
+}
+
+/* Responsive: Tablet (<= 900px) */
+@media (max-width: 900px) {
+  .tools-marquee-strip {
+    height: 50px;
+    transform: rotate(0deg);
+  }
+
+  .marquee-item {
+    font-size: 18px;
+  }
+
+  .marquee-star {
+    width: 15px;
+    height: 15px;
+    margin: 0 18px;
+  }
+}
+
+/* Responsive: Mobile (<= 600px) */
+@media (max-width: 600px) {
+  .tools-marquee-strip {
+    height: 44px;
+    transform: rotate(0deg);
+  }
+
+  .marquee-item {
+    font-size: 15px;
+  }
+
+  .marquee-star {
+    width: 13px;
+    height: 13px;
+    margin: 0 14px;
+  }
+}
